@@ -1,0 +1,3 @@
+candidate,family,lookback_events,top_k,threshold_bps,rebalance_events,keep_bps,cost_profile,split,total_return,cagr,ann_vol,sharpe,max_drawdown,avg_month,median_month,best_month,worst_month,positive_month_pct,month_ge_10_pct,month_le_minus10_pct,funding_return_sum,basis_return_sum,annual_turnover,active_time_pct,months,train_score,train_cagr,train_sharpe,passes_oos
+ranked_carry_lb12_k5_th2_reb6_keep1,ranked_carry,12,5,2.0,6,1.0,taker,test,0.0,0.0,0.0,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,19,6.865874532903332,0.03886090836935341,3.222732245083393,False
+ranked_carry_lb12_k5_th2_reb6_keep1,ranked_carry,12,5,2.0,6,1.0,optimistic_limit,test,0.0,0.0,0.0,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,19,9.24151549470107,0.048755381295070954,4.406586161262224,False
