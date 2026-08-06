@@ -1,0 +1,45 @@
+name: Current stock perp signal wave 4C
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'wave4c_live_signal.py'
+      - 'requirements.txt'
+      - '.github/workflows/wave4c_live_signal.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  signal:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Generate current signal
+        run: python wave4c_live_signal.py
+      - name: Commit signal
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results_wave4c
+          if git diff --cached --quiet; then
+            echo "No signal changes"
+          else
+            git commit -m "Update current stock perp signal [skip ci]"
+            git push
+          fi
+      - name: Upload signal artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: current-stock-perp-signal
+          path: results_wave4c/
+          if-no-files-found: error
+          retention-days: 7
