@@ -1,0 +1,44 @@
+name: Crypto strategy backtest
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - backtest.py
+      - requirements.txt
+      - .github/workflows/backtest.yml
+
+permissions:
+  contents: write
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run backtest
+        run: python backtest.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results
+          if git diff --cached --quiet; then
+            echo "No result changes"
+          else
+            git commit -m "Update crypto strategy backtest results"
+            git push
+          fi
+      - name: Upload results artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: crypto-backtest-results
+          path: results/
+          if-no-files-found: error
