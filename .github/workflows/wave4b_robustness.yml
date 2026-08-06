@@ -1,0 +1,51 @@
+name: US stock strategy robustness wave 4B
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'wave4b_robustness.py'
+      - 'wave4_equities.py'
+      - 'requirements.txt'
+      - '.github/workflows/wave4b_robustness.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  backtest:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Cache equity data
+        uses: actions/cache@v4
+        with:
+          path: .cache_equities
+          key: yahoo-bitget-longhistory-2015-2026-08-v1
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run robustness scan
+        run: python wave4b_robustness.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results_wave4b
+          if git diff --cached --quiet; then
+            echo "No result changes"
+          else
+            git commit -m "Update stock robustness results [skip ci]"
+            git push
+          fi
+      - name: Upload results artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: stock-strategy-robustness-results
+          path: results_wave4b/
+          if-no-files-found: error
+          retention-days: 30
