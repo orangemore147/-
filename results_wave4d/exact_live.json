@@ -1,0 +1,105 @@
+{
+  "generated_at": "2026-08-06T06:36:14.586511+00:00",
+  "latest_underlying_close_date": "2026-08-05T00:00:00+00:00",
+  "last_effective_portfolio_change_date": "2026-08-03T00:00:00+00:00",
+  "sessions_until_next_scheduled_signal_calculation": 1,
+  "selected_tickers": [
+    "INTC",
+    "CSCO",
+    "UNH"
+  ],
+  "base_equal_weights": {
+    "INTC": 0.3333333333333333,
+    "CSCO": 0.3333333333333333,
+    "UNH": 0.3333333333333333
+  },
+  "profiles": {
+    "unlevered": {
+      "gross_notional_as_account_equity": 1.0,
+      "notional_per_selected_stock_as_account_equity": 0.3333333333333333,
+      "estimated_annualized_target_volatility": null,
+      "maximum_leverage_cap": 1.0
+    },
+    "base": {
+      "gross_notional_as_account_equity": 0.38347585327329653,
+      "notional_per_selected_stock_as_account_equity": 0.12782528442443217,
+      "estimated_annualized_target_volatility": 0.2,
+      "maximum_leverage_cap": 1.5
+    },
+    "balanced": {
+      "gross_notional_as_account_equity": 0.6710827432282689,
+      "notional_per_selected_stock_as_account_equity": 0.22369424774275629,
+      "estimated_annualized_target_volatility": 0.35,
+      "maximum_leverage_cap": 2.0
+    }
+  },
+  "market_data": [
+    {
+      "symbol": "INTCUSDT",
+      "mark_price": 99.93,
+      "last_price": 99.9,
+      "bid": 99.89,
+      "ask": 99.91,
+      "spread_pct": 0.0002001400980686082,
+      "current_funding_rate": 0.0,
+      "funding_interval_hours": 8.0,
+      "recent_funding_observations": 100,
+      "recent_mean_funding_rate": 2.346e-05,
+      "recent_median_funding_rate": 0.0,
+      "recent_positive_funding_pct": 0.24,
+      "recent_simple_annualized_long_funding_drag": 0.0256887,
+      "next_funding_time": "2026-08-06T08:00:00+00:00",
+      "min_funding_rate": -0.005,
+      "max_funding_rate": 0.005,
+      "quote_volume_24h": 27901703.17,
+      "ticker": "INTC",
+      "underlying_adjusted_close": 101.05999755859375,
+      "momentum_126d_at_latest": 1.0519796458597717
+    },
+    {
+      "symbol": "CSCOUSDT",
+      "mark_price": 122.75,
+      "last_price": 122.75,
+      "bid": 122.72,
+      "ask": 122.82,
+      "spread_pct": 0.0008146639511201167,
+      "current_funding_rate": 0.0,
+      "funding_interval_hours": 8.0,
+      "recent_funding_observations": 100,
+      "recent_mean_funding_rate": 0.0,
+      "recent_median_funding_rate": 0.0,
+      "recent_positive_funding_pct": 0.0,
+      "recent_simple_annualized_long_funding_drag": 0.0,
+      "next_funding_time": "2026-08-06T08:00:00+00:00",
+      "min_funding_rate": -0.005,
+      "max_funding_rate": 0.005,
+      "quote_volume_24h": 67501.5703,
+      "ticker": "CSCO",
+      "underlying_adjusted_close": 121.5,
+      "momentum_126d_at_latest": 0.475338104244609
+    },
+    {
+      "symbol": "UNHUSDT",
+      "mark_price": 413.26,
+      "last_price": 413.26,
+      "bid": 412.95,
+      "ask": 413.81,
+      "spread_pct": 0.0020810143735179153,
+      "current_funding_rate": 0.0,
+      "funding_interval_hours": 8.0,
+      "recent_funding_observations": 100,
+      "recent_mean_funding_rate": -1.0609999999999998e-05,
+      "recent_median_funding_rate": 0.0,
+      "recent_positive_funding_pct": 0.01,
+      "recent_simple_annualized_long_funding_drag": -0.011617949999999998,
+      "next_funding_time": "2026-08-06T08:00:00+00:00",
+      "min_funding_rate": -0.005,
+      "max_funding_rate": 0.005,
+      "quote_volume_24h": 104379.9975,
+      "ticker": "UNH",
+      "underlying_adjusted_close": 412.75,
+      "momentum_126d_at_latest": 0.4720760878213359
+    }
+  ],
+  "errors": []
+}
