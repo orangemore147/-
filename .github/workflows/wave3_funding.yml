@@ -1,0 +1,50 @@
+name: Crypto funding carry scan wave 3
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'wave3_funding_carry.py'
+      - 'requirements.txt'
+      - '.github/workflows/wave3_funding.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  backtest:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Cache funding carry data
+        uses: actions/cache@v4
+        with:
+          path: .cache_wave3
+          key: binance-funding-spot-perp-2023-2026-07-v1
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run funding carry scan
+        run: python wave3_funding_carry.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results_wave3
+          if git diff --cached --quiet; then
+            echo "No result changes"
+          else
+            git commit -m "Update funding carry results [skip ci]"
+            git push
+          fi
+      - name: Upload results artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: crypto-funding-carry-results
+          path: results_wave3/
+          if-no-files-found: error
+          retention-days: 30
