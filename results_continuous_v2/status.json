@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "batch": 0,
+  "started_at": "2026-08-07T16:27:00.296942+00:00",
+  "completed_at": "2026-08-07T16:28:15.264757+00:00",
+  "tested": 240,
+  "development_survivors": 14,
+  "holdout_evaluated": 12,
+  "holdout_strict_candidates": 0,
+  "external_checked": 0,
+  "strict_passes": 0,
+  "alert_file": false
+}
