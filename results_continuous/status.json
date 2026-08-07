@@ -1,0 +1,12 @@
+{
+  "status": "completed",
+  "batch": 0,
+  "started_at": "2026-08-07T16:20:48.642884+00:00",
+  "completed_at": "2026-08-07T16:22:01.142598+00:00",
+  "tested": 108,
+  "basic_gate_survivors": 7,
+  "pre_external_candidates": 0,
+  "external_checked": 0,
+  "strict_passes": 0,
+  "alert_file": false
+}
