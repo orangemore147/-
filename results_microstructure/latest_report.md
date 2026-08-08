@@ -1,10 +1,10 @@
 # Microstructure research
 
-- Batch: 6
+- Batch: 7
 - Tested: 360
-- Development survivors: 9
-- Holdout evaluated: 9
-- Holdout gates passed: 0
+- Development survivors: 12
+- Holdout evaluated: 10
+- Holdout gates passed: 1
 - External strict passes: 0
 
 ## Development leaderboard (holdout hidden)
