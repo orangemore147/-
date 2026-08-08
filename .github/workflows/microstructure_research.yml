@@ -3,7 +3,7 @@ name: Microstructure crypto research
 on:
   workflow_dispatch:
   schedule:
-    - cron: '47 */2 * * *'
+    - cron: '47 * * * *'
   push:
     branches: [main]
     paths:
