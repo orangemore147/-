@@ -1,9 +1,9 @@
 {
   "status": "completed",
-  "batch": 19,
-  "started_at": "2026-08-08T14:49:02.722851+00:00",
-  "completed_at": "2026-08-08T14:49:09.546406+00:00",
-  "tested": 315,
+  "batch": 20,
+  "started_at": "2026-08-08T15:44:12.057756+00:00",
+  "completed_at": "2026-08-08T15:44:18.432920+00:00",
+  "tested": 312,
   "development_survivors": 56,
   "holdout_evaluated": 12,
   "holdout_strict_candidates": 0,
