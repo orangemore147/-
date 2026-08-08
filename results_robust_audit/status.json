@@ -1,12 +1,12 @@
 {
   "status": "completed",
-  "started_at": "2026-08-08T11:52:08.079948+00:00",
-  "completed_at": "2026-08-08T11:52:20.103510+00:00",
+  "started_at": "2026-08-08T13:25:25.500966+00:00",
+  "completed_at": "2026-08-08T13:25:37.439358+00:00",
   "new_candidates_audited": 20,
   "robust_development_survivors": 20,
   "holdout_evaluated": 20,
   "external_checked": 0,
   "strict_passes": 0,
-  "total_audited_keys": 60,
+  "total_audited_keys": 80,
   "alert_file": false
 }
