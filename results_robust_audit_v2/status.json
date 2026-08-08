@@ -1,0 +1,12 @@
+{
+  "status": "completed",
+  "started_at": "2026-08-08T14:56:58.712096+00:00",
+  "completed_at": "2026-08-08T14:58:23.729241+00:00",
+  "new_unique_fingerprints": 20,
+  "robust_development_survivors": 16,
+  "holdout_evaluated": 16,
+  "external_checked": 0,
+  "strict_passes": 0,
+  "total_audited_fingerprints": 20,
+  "alert_file": false
+}
