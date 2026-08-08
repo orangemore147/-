@@ -1,11 +1,11 @@
 {
   "status": "completed",
-  "batch": 2,
-  "started_at": "2026-08-08T10:14:07.507368+00:00",
-  "completed_at": "2026-08-08T10:14:22.723860+00:00",
+  "batch": 3,
+  "started_at": "2026-08-08T11:10:18.973899+00:00",
+  "completed_at": "2026-08-08T11:10:29.993466+00:00",
   "tested": 360,
-  "development_survivors": 7,
-  "holdout_evaluated": 7,
+  "development_survivors": 4,
+  "holdout_evaluated": 4,
   "holdout_gates_passed": 0,
   "strict_passes": 0,
   "alert_file": false
